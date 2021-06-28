@@ -19,7 +19,7 @@
 
 @layer utilities {
   .area {
-    @apply my-4 xl:my-32 mx-auto px-4 max-w-5xl font-sansSerif text-stroke-2 text-transparent text-stroke-signal-DEFAULT text-6xl xl:text-8xl text-justify;
+    @apply my-4 xl:my-32 mx-auto px-4 max-w-5xl font-sansSerif text-stroke-2 text-transparent text-stroke-signal-DEFAULT text-6xl xl:text-8xl text-justify leading-snug;
     hyphens: auto;
   }
 }

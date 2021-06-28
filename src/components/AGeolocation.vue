@@ -20,10 +20,10 @@
   </transition>
   <!--  -->
 
-  <transition o name="fade">
+  <transition name="fade">
     <p v-if="loading">
       Exploring
-      <mark class="text-signal text-stroke-0">the solarsystem</mark>
+      <mark class="text-signal">the solarsystem</mark>
       and <mark class="user">your neighbourhood</mark>…
     </p>
   </transition>
@@ -32,7 +32,9 @@
   <transition name="fade">
     <p v-if="start && !loading">
       If <mark class="user">you</mark> were the
-      <mark class="text-signal text-stroke-0">sun</mark>,
+      <mark class="text-signal">sun</mark> with the diameter of
+      <mark class="user">{{ diameter + " m" }}</mark
+      >,
 
       <span v-for="[name, ref] in Object.entries(referncesClean)" :key="name">
         <mark class="text-signal">{{ name + " " }}</mark>
@@ -41,8 +43,8 @@
           v-for="(tag, index) in Object.values(ref)"
           :key="tag"
           :class="'text-black-' + (500 - index * 200)"
-          class="capitalize text-stroke-0"
-          >{{ " " + tag + " " }}</mark
+          class="capitalize"
+          >{{ " " + tag.replace("_", " ") + " " }}</mark
         >.
       </span>
     </p>
@@ -77,6 +79,13 @@ export default {
       console.log({ referencesClean });
       return referencesClean;
     },
+    diameter() {
+      if (this.refernce) {
+        const num = (this.references.Mercury.dist / 60000) * 1392700;
+        return Math.round((num + Number.EPSILON) * 100) / 100;
+      }
+      return 0;
+    },
   },
   methods: {
     async get() {
@@ -97,7 +106,7 @@ export default {
 
 <style>
 mark {
-  @apply bg-transparent;
+  @apply bg-transparent text-stroke-0;
 }
 .fade-enter-active,
 .fade-leave-active {
