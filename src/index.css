@@ -2,3 +2,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .user {
+    @apply text-stroke-0 text-black;
+  }
+  @font-face {
+    font-family: "FormulaCondensed";
+    font-weight: black;
+    src: local("FormulaCondensed-Black"),
+      url(./assets/fonts/FormulaCondensed-Black.otf) format("otf"),
+      url(./assets/fonts/FormulaCondensed-Black.woff) format("wof"),
+      url(./assets/fonts/FormulaCondensed-Black.woff2) format("woff2");
+  }
+}
+
+@layer utilities {
+  .area {
+    @apply my-4 xl:my-32 mx-auto px-4 max-w-5xl font-sansSerif text-stroke-2 text-transparent text-stroke-signal-DEFAULT text-6xl xl:text-8xl text-justify;
+    hyphens: auto;
+  }
+}
