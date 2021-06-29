@@ -1,12 +1,5 @@
 <template>
-  <transition
-    enter-active-class="transition-all transition-fastest ease-out-quad"
-    leave-active-class="transition-all transition-faster ease-in-quad"
-    enter-class="opacity-0 scale-70"
-    enter-to-class="opacity-100 scale-100"
-    leave-class="opacity-100 scale-100"
-    leave-to-class="opacity-0 scale-70"
-  >
+  <div>
     <p v-if="!start && !loading">
       For the use we need
       <mark class="user"> your location on earth</mark>.<br /><a
@@ -24,17 +17,6 @@
         Okay
       </a>
     </p>
-  </transition>
-  <!--  -->
-
-  <transition
-    enter-active-class="transition-all transition-fastest ease-out-quad"
-    leave-active-class="transition-all transition-faster ease-in-quad"
-    enter-class="opacity-0 scale-70"
-    enter-to-class="opacity-100 scale-100"
-    leave-class="opacity-100 scale-100"
-    leave-to-class="opacity-0 scale-70"
-  >
     <p v-if="loading">
       Exploring
       <mark class="text-signal">the solarsystem</mark>
@@ -42,26 +24,13 @@
       <span class="load-container ml-2" style="animation-delay: 0s">.</span>
       <span class="load-container ml-2" style="animation-delay: 0.2s">.</span>
       <span class="load-container ml-2" style="animation-delay: 0.4s">.</span>
-
       Even at the speed of light, this can take over 10 seconds.
     </p>
-  </transition>
-
-  <!--  -->
-  <transition
-    enter-active-class="transition-all transition-fastest ease-out-quad"
-    leave-active-class="transition-all transition-faster ease-in-quad"
-    enter-class="opacity-0 scale-70"
-    enter-to-class="opacity-100 scale-100"
-    leave-class="opacity-100 scale-100"
-    leave-to-class="opacity-0 scale-70"
-  >
     <p v-if="start && !loading">
       If <mark class="user">you</mark> were the
       <mark class="text-signal">sun</mark> with the diameter of
       <mark class="user">{{ diameter + " m" }}</mark
       >,
-
       <span v-for="[name, ref] in Object.entries(referncesClean)" :key="name">
         <mark class="text-signal">{{ name + " " }}</mark>
         would be at
@@ -74,7 +43,7 @@
         >.
       </span>
     </p>
-  </transition>
+  </div>
 </template>
 
 <script>
@@ -131,6 +100,9 @@ export default {
 </script>
 
 <style>
+p {
+  @apply leading-tight;
+}
 mark {
   @apply bg-transparent text-stroke-0;
 }
