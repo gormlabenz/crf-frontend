@@ -24,6 +24,8 @@
                     transition-all
                     cursor-pointer
                     underline
+                    decoration-2
+                    xl:decoration-2
                 "
             >
                 Okay

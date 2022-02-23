@@ -15,4 +15,11 @@
         @apply my-auto py-4 xl:py-32 mx-auto px-4 max-w-5xl font-thin text-2xl xl:text-4xl;
         hyphens: auto;
     }
+
+    .decoration-2 {
+        text-decoration-thickness: 2px;
+    }
+    .decoration-4 {
+        text-decoration-thickness: 2px;
+    }
 }
