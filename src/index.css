@@ -1,25 +1,18 @@
-/* ./src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  .user {
-    @apply text-stroke-0 text-black;
-  }
-  @font-face {
-    font-family: "FormulaCondensed";
-    font-weight: bold;
-    src: local("FormulaCondensed-Black"),
-      url(./assets/fonts/FormulaCondensed-Black.otf) format("otf"),
-      url(./assets/fonts/FormulaCondensed-Black.woff) format("wof"),
-      url(./assets/fonts/FormulaCondensed-Black.woff2) format("woff2");
-  }
+    .user {
+        @apply text-stroke-0 text-black;
+    }
 }
 
 @layer utilities {
-  .area {
-    @apply my-4 xl:my-32 mx-auto px-4 max-w-5xl font-sansSerif text-stroke-2 text-transparent text-stroke-signal-DEFAULT text-6xl xl:text-8xl text-justify leading-snug;
-    hyphens: auto;
-  }
+    .area {
+        @apply my-auto py-4 xl:py-32 mx-auto px-4 max-w-5xl font-thin text-2xl xl:text-4xl;
+        hyphens: auto;
+    }
 }

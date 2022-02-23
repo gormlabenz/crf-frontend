@@ -1,18 +1,18 @@
 <template>
-  <div class="area">
-    <AGeolocation />
-  </div>
+    <div class="flex justify-center items-center h-screen">
+        <AGeolocation />
+    </div>
 </template>
 
 <script>
-import AGeolocation from "./components/AGeolocation.vue";
+import AGeolocation from './components/AGeolocation.vue'
 
 export default {
-  name: "App",
-  components: {
-    AGeolocation,
-  },
-};
+    name: 'App',
+    components: {
+        AGeolocation,
+    },
+}
 </script>
 
 <style></style>
