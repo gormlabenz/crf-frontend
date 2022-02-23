@@ -35,5 +35,5 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [require('tailwindcss-text-fill-stroke')()],
+    plugins: [],
 }

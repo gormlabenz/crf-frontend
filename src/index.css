@@ -6,7 +6,7 @@
 
 @layer base {
     .user {
-        @apply text-stroke-0 text-black;
+        @apply text-black;
     }
 }
 

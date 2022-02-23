@@ -22,7 +22,6 @@
                     text-signal
                     hover:text-black
                     transition-all
-                    text-stroke-0
                     cursor-pointer
                     underline
                 "
@@ -126,7 +125,7 @@ p {
     @apply leading-tight tracking-tight;
 }
 mark {
-    @apply bg-transparent text-stroke-0 font-bold;
+    @apply bg-transparent  font-bold;
 }
 .load-container {
     animation: load 2.5s ease-in-out infinite;
