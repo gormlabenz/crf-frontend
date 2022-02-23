@@ -42,7 +42,7 @@
     <mark class="text-signal">sun</mark> with the diameter of
     <mark class="user">{{ diameter + " m" }}</mark
     >,
-    <span v-for="[name, ref] in Object.entries(referncesClean)" :key="name">
+    <span v-for="[name, ref] in Object.entries(referencesClean)" :key="name">
       <mark class="text-signal">{{ name + " " }}</mark>
       would be at
       <mark
@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import Refernces from "../js/references";
+import References from "../js/references";
 /* import { data } from "../js/references"; */
 
 export default {
@@ -69,7 +69,7 @@ export default {
     };
   },
   computed: {
-    referncesClean() {
+    referencesClean() {
       let referencesClean = {};
       Object.entries(this.references).forEach((entry) => {
         let refs = { name: entry[1]["name"] };
@@ -95,7 +95,7 @@ export default {
   methods: {
     async get() {
       this.start = true;
-      this.refernce = new Refernces();
+      this.refernce = new References();
       this.loading = true;
       await this.refernce.build();
       this.loading = false;
