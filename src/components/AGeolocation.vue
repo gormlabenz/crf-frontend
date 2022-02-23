@@ -14,7 +14,8 @@
         ></p>
         <p v-if="!start && !loading">
             For the use we need
-            <mark class="user"> your location on earth</mark>.<a
+            <mark class="user"> your location on earth</mark>.&nbsp;
+            <a
                 v-if="!start"
                 @click="get"
                 class="
@@ -41,7 +42,7 @@
             >
             <span class="load-container ml-1" style="animation-delay: 0.4s"
                 >.</span
-            >
+            ><br />
             Even at the speed of light, this can take over 10 seconds.
         </p>
         <p v-if="start && !loading">
@@ -145,7 +146,7 @@ mark {
 @keyframes load {
     0%,
     100% {
-        transform: translateY(-20px);
+        transform: translateY(-0.25em);
     }
     50% {
         transform: translateY(0);
