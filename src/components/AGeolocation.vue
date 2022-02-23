@@ -44,7 +44,7 @@
             <span class="load-container ml-1" style="animation-delay: 0.4s"
                 >.</span
             ><br />
-            Even at the speed of light, this can take over 10 seconds.
+            Even at the speed of light, this can take over 1 minute.
         </p>
         <p v-if="start && !loading">
             If <mark class="user">you</mark> were the
